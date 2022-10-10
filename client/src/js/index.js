@@ -24,6 +24,10 @@ if (typeof editor === 'undefined') {
   loadSpinner();
 }
 
+window.addEventListener('load', function () {
+  document.getElementById('logo').src = Logo;
+});
+
 // Check if service workers are supported
 if ('serviceWorker' in navigator) {
   // register workbox service worker
@@ -32,7 +36,3 @@ if ('serviceWorker' in navigator) {
 } else {
   console.error('Service workers are not supported in this browser.');
 }
-
-window.addEventListener('load', function () {
-  document.getElementById('logo').src = Logo;
-});
